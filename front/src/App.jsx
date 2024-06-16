@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { addUser } from "./redux/userSlice";
 import DataUser from "./components/dataUser/DataUser";
+import EmailUser from "./components/emailUser/EmailUser";
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
         Datos del usuario en store
         </h2>
         <DataUser />
+        <EmailUser />
       </div>
     </>
   )
