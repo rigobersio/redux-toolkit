@@ -1,0 +1,30 @@
+import { createSlice } from '@reduxjs/toolkit';
+
+export const userSlice = createSlice({
+    name: 'user',
+    initialState: {
+        id: null,
+        user: null,
+        userName: null,
+        email: null
+    },
+    reducers: {
+        addUser: (state, action) => {
+            const { id, user, userName, email } = action.payload; // esto es lo que llega del payload de la accion que se dispara desde el componente
+            state.id = id; // el estado inicial se actualiza. se toma el valor inicial por medio de state y se actualiza con lo que llega del action.payload
+            state.user = user;
+            state.userName = userName;
+            state.email = email;
+        },
+        // acá otro reducer con la única acción de cambiar el email.
+        changeEmail: (state, action) => {
+            state.email = action.payload // aca solo llegara el email por lo que no es necesario desestructurar
+
+        }
+
+    }
+
+});
+
+export const { addUser, changeEmail } = userSlice.actions;
+// userSlice.actions es un objeto con todas las acciones que queremos exportar: es creado por reduxjs/toolkit
