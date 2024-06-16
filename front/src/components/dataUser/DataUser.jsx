@@ -4,22 +4,23 @@ const DataUser = () => {
   const user = useSelector((state) => state.user); // **state** es el estado global y **user** es el nombre que se le coloco al userSlice
 
   return (
-    <header className="text-3xl font-bold underline">
-      <h2 className="text-3xl font-bold underline">Datos del usuario en store</h2>
-      <ul className="text-3xl font-bold underline">
-        <li className="text-3xl font-bold underline">
+    <header className="flex content-center mb">
+      <div className='mt-5 p-5 bg-slate-500'>
+      <ul className="font-bold">
+        <li className="font-bold">
           Id: {user.id}
         </li>
-        <li className="text-3xl font-bold underline">
+        <li className="font-bold">
           Nombre: {user.name}
         </li>
-        <li className="text-3xl font-bold underline">
+        <li className="font-bold">
           Nombre de usuario: {user.userName}
         </li>
-        <li className="text-3xl font-bold underline">
+        <li className="font-bold">
           Email: {user.email}
         </li>
       </ul>
+      </div>
     </header>
   )
 }

@@ -1,4 +1,4 @@
-
+import DataUser from "./components/dataUser/DataUser"
 
 function App() {
  
@@ -6,9 +6,10 @@ function App() {
   return (
     <>
       <div>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+        <h2 className="text-3xl font-bold underline">
+        Datos del usuario en store
+        </h2>
+        <DataUser />
       </div>
     </>
   )
