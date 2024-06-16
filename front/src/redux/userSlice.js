@@ -28,3 +28,4 @@ export const userSlice = createSlice({
 
 export const { addUser, changeEmail } = userSlice.actions;
 // userSlice.actions es un objeto con todas las acciones que queremos exportar: es creado por reduxjs/toolkit
+// lo que se exporta no son los reducers addUser y changeEmail, sino las acciones de userSlice.actions (tiene el mismo nombre).
